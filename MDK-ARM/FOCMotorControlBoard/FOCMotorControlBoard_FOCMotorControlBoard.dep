@@ -1,10 +1,10 @@
 Dependencies for Project 'FOCMotorControlBoard', Target 'FOCMotorControlBoard': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (startup_stm32f410cx.s)(0x6A16B497)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 538" --pd "_RTE_ SETA 1" --pd "STM32F410Cx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f410cx.lst --xref -o focmotorcontrolboard\startup_stm32f410cx.o --depend focmotorcontrolboard\startup_stm32f410cx.d)
-F (../Core/Src/main.c)(0x6A16B495)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\main.o --omf_browse focmotorcontrolboard\main.crf --depend focmotorcontrolboard\main.d)
-I (../Core/Inc/main.h)(0x6A16B495)
+F (startup_stm32f410cx.s)(0x6A17F453)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 538" --pd "_RTE_ SETA 1" --pd "STM32F410Cx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f410cx.lst --xref -o focmotorcontrolboard\startup_stm32f410cx.o --depend focmotorcontrolboard\startup_stm32f410cx.d)
+F (../Core/Src/main.c)(0x6A18006C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\main.o --omf_browse focmotorcontrolboard\main.crf --depend focmotorcontrolboard\main.d)
+I (../Core/Inc/main.h)(0x6A18006C)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -28,6 +28,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -37,15 +38,17 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
 I (../Core/Inc/adc.h)(0x6A16B494)
+I (../Core/Inc/crc.h)(0x6A17B120)
 I (../Core/Inc/dma.h)(0x6A16B494)
-I (../Core/Inc/tim.h)(0x6A16B494)
-I (../Core/Inc/usart.h)(0x6A16B495)
+I (../Core/Inc/tim.h)(0x6A17E7EF)
+I (../Core/Inc/usart.h)(0x6A17AECF)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdio.h)(0x6853F9B0)
 I (../Core/Inc/gpio.h)(0x6A16B494)
-F (../Core/Src/gpio.c)(0x6A16B493)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\gpio.o --omf_browse focmotorcontrolboard\gpio.crf --depend focmotorcontrolboard\gpio.d)
+F (../Core/Src/gpio.c)(0x6A17E8A2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\gpio.o --omf_browse focmotorcontrolboard\gpio.crf --depend focmotorcontrolboard\gpio.d)
 I (../Core/Inc/gpio.h)(0x6A16B494)
-I (../Core/Inc/main.h)(0x6A16B495)
+I (../Core/Inc/main.h)(0x6A18006C)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -69,6 +72,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -77,11 +81,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Core/Src/adc.c)(0x6A16B494)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\adc.o --omf_browse focmotorcontrolboard\adc.crf --depend focmotorcontrolboard\adc.d)
+F (../Core/Src/adc.c)(0x6A17F326)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\adc.o --omf_browse focmotorcontrolboard\adc.crf --depend focmotorcontrolboard\adc.d)
 I (../Core/Inc/adc.h)(0x6A16B494)
-I (../Core/Inc/main.h)(0x6A16B495)
+I (../Core/Inc/main.h)(0x6A18006C)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -105,6 +109,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -113,11 +118,48 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Core/Src/dma.c)(0x6A16B494)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\dma.o --omf_browse focmotorcontrolboard\dma.crf --depend focmotorcontrolboard\dma.d)
+F (../Core/Src/crc.c)(0x6A17B120)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\crc.o --omf_browse focmotorcontrolboard\crc.crf --depend focmotorcontrolboard\crc.d)
+I (../Core/Inc/crc.h)(0x6A17B120)
+I (../Core/Inc/main.h)(0x6A18006C)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x691ADDDC)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdint.h)(0x6853F9B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x691ADDDB)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stddef.h)(0x6853F9AF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
+F (../Core/Src/dma.c)(0x6A16B494)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\dma.o --omf_browse focmotorcontrolboard\dma.crf --depend focmotorcontrolboard\dma.d)
 I (../Core/Inc/dma.h)(0x6A16B494)
-I (../Core/Inc/main.h)(0x6A16B495)
+I (../Core/Inc/main.h)(0x6A18006C)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -141,6 +183,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -149,11 +192,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Core/Src/tim.c)(0x6A16B494)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\tim.o --omf_browse focmotorcontrolboard\tim.crf --depend focmotorcontrolboard\tim.d)
-I (../Core/Inc/tim.h)(0x6A16B494)
-I (../Core/Inc/main.h)(0x6A16B495)
+F (../Core/Src/tim.c)(0x6A17F452)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\tim.o --omf_browse focmotorcontrolboard\tim.crf --depend focmotorcontrolboard\tim.d)
+I (../Core/Inc/tim.h)(0x6A17E7EF)
+I (../Core/Inc/main.h)(0x6A18006C)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -177,6 +220,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -185,11 +229,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Core/Src/usart.c)(0x6A16B495)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\usart.o --omf_browse focmotorcontrolboard\usart.crf --depend focmotorcontrolboard\usart.d)
-I (../Core/Inc/usart.h)(0x6A16B495)
-I (../Core/Inc/main.h)(0x6A16B495)
+F (../Core/Src/usart.c)(0x6A17E0CD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\usart.o --omf_browse focmotorcontrolboard\usart.crf --depend focmotorcontrolboard\usart.d)
+I (../Core/Inc/usart.h)(0x6A17AECF)
+I (../Core/Inc/main.h)(0x6A18006C)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -213,6 +257,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -221,10 +266,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Core/Src/stm32f4xx_it.c)(0x6A16B495)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_it.o --omf_browse focmotorcontrolboard\stm32f4xx_it.crf --depend focmotorcontrolboard\stm32f4xx_it.d)
-I (../Core/Inc/main.h)(0x6A16B495)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdio.h)(0x6853F9B0)
+F (../Core/Src/stm32f4xx_it.c)(0x6A17F327)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_it.o --omf_browse focmotorcontrolboard\stm32f4xx_it.crf --depend focmotorcontrolboard\stm32f4xx_it.d)
+I (../Core/Inc/main.h)(0x6A18006C)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -248,6 +294,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -257,10 +304,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
 I (../Core/Inc/stm32f4xx_it.h)(0x6A16B495)
-F (../Core/Src/stm32f4xx_hal_msp.c)(0x6A16B495)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_msp.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_msp.crf --depend focmotorcontrolboard\stm32f4xx_hal_msp.d)
-I (../Core/Inc/main.h)(0x6A16B495)
+I (../Int/Inc/bsp.h)(0x6A13E492)
+F (../Core/Src/stm32f4xx_hal_msp.c)(0x6A16B495)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_msp.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_msp.crf --depend focmotorcontrolboard\stm32f4xx_hal_msp.d)
+I (../Core/Inc/main.h)(0x6A18006C)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -284,6 +332,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -292,9 +341,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_adc.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_adc.crf --depend focmotorcontrolboard\stm32f4xx_hal_adc.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_adc.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_adc.crf --depend focmotorcontrolboard\stm32f4xx_hal_adc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -318,6 +367,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -326,9 +376,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_adc_ex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_adc_ex.crf --depend focmotorcontrolboard\stm32f4xx_hal_adc_ex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_adc_ex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_adc_ex.crf --depend focmotorcontrolboard\stm32f4xx_hal_adc_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -352,6 +402,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -360,9 +411,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_rcc.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_rcc.crf --depend focmotorcontrolboard\stm32f4xx_hal_rcc.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_rcc.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_rcc.crf --depend focmotorcontrolboard\stm32f4xx_hal_rcc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -386,6 +437,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -394,9 +446,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_rcc_ex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_rcc_ex.crf --depend focmotorcontrolboard\stm32f4xx_hal_rcc_ex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_rcc_ex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_rcc_ex.crf --depend focmotorcontrolboard\stm32f4xx_hal_rcc_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -420,6 +472,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -428,9 +481,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_flash.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_flash.crf --depend focmotorcontrolboard\stm32f4xx_hal_flash.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_flash.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_flash.crf --depend focmotorcontrolboard\stm32f4xx_hal_flash.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -454,6 +507,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -462,9 +516,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_flash_ex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_flash_ex.crf --depend focmotorcontrolboard\stm32f4xx_hal_flash_ex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_flash_ex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_flash_ex.crf --depend focmotorcontrolboard\stm32f4xx_hal_flash_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -488,6 +542,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -496,9 +551,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_flash_ramfunc.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_flash_ramfunc.crf --depend focmotorcontrolboard\stm32f4xx_hal_flash_ramfunc.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_flash_ramfunc.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_flash_ramfunc.crf --depend focmotorcontrolboard\stm32f4xx_hal_flash_ramfunc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -522,6 +577,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -530,9 +586,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_gpio.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_gpio.crf --depend focmotorcontrolboard\stm32f4xx_hal_gpio.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_gpio.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_gpio.crf --depend focmotorcontrolboard\stm32f4xx_hal_gpio.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -556,6 +612,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -564,9 +621,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_dma_ex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_dma_ex.crf --depend focmotorcontrolboard\stm32f4xx_hal_dma_ex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_dma_ex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_dma_ex.crf --depend focmotorcontrolboard\stm32f4xx_hal_dma_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -590,6 +647,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -598,9 +656,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_dma.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_dma.crf --depend focmotorcontrolboard\stm32f4xx_hal_dma.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_dma.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_dma.crf --depend focmotorcontrolboard\stm32f4xx_hal_dma.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -624,6 +682,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -632,9 +691,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_pwr.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_pwr.crf --depend focmotorcontrolboard\stm32f4xx_hal_pwr.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_pwr.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_pwr.crf --depend focmotorcontrolboard\stm32f4xx_hal_pwr.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -658,6 +717,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -666,9 +726,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_pwr_ex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_pwr_ex.crf --depend focmotorcontrolboard\stm32f4xx_hal_pwr_ex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_pwr_ex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_pwr_ex.crf --depend focmotorcontrolboard\stm32f4xx_hal_pwr_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -692,6 +752,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -700,9 +761,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_cortex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_cortex.crf --depend focmotorcontrolboard\stm32f4xx_hal_cortex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_cortex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_cortex.crf --depend focmotorcontrolboard\stm32f4xx_hal_cortex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -726,6 +787,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -734,9 +796,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal.o --omf_browse focmotorcontrolboard\stm32f4xx_hal.crf --depend focmotorcontrolboard\stm32f4xx_hal.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal.o --omf_browse focmotorcontrolboard\stm32f4xx_hal.crf --depend focmotorcontrolboard\stm32f4xx_hal.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -760,6 +822,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -768,9 +831,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_exti.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_exti.crf --depend focmotorcontrolboard\stm32f4xx_hal_exti.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_exti.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_exti.crf --depend focmotorcontrolboard\stm32f4xx_hal_exti.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -794,6 +857,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -802,9 +866,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_tim.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_tim.crf --depend focmotorcontrolboard\stm32f4xx_hal_tim.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_crc.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_crc.crf --depend focmotorcontrolboard\stm32f4xx_hal_crc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -828,6 +892,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -836,9 +901,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_tim_ex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_tim_ex.crf --depend focmotorcontrolboard\stm32f4xx_hal_tim_ex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_tim.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_tim.crf --depend focmotorcontrolboard\stm32f4xx_hal_tim.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -862,6 +927,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -870,9 +936,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_uart.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_uart.crf --depend focmotorcontrolboard\stm32f4xx_hal_uart.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_tim_ex.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_tim_ex.crf --depend focmotorcontrolboard\stm32f4xx_hal_tim_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
@@ -896,6 +962,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -904,7 +971,42 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
-F (../Core/Src/system_stm32f4xx.c)(0x691ADDDC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\system_stm32f4xx.o --omf_browse focmotorcontrolboard\system_stm32f4xx.crf --depend focmotorcontrolboard\system_stm32f4xx.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c)(0x691ADDDB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\stm32f4xx_hal_uart.o --omf_browse focmotorcontrolboard\stm32f4xx_hal_uart.crf --depend focmotorcontrolboard\stm32f4xx_hal_uart.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x691ADDDC)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdint.h)(0x6853F9B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x691ADDDB)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stddef.h)(0x6853F9AF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
+F (../Core/Src/system_stm32f4xx.c)(0x691ADDDC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\system_stm32f4xx.o --omf_browse focmotorcontrolboard\system_stm32f4xx.crf --depend focmotorcontrolboard\system_stm32f4xx.d)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h)(0x691ADDDC)
 I (../Drivers/CMSIS/Include/core_cm4.h)(0x691ADDDC)
@@ -915,7 +1017,7 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x691ADDDC)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x691ADDDC)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x691ADDDC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
-I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A16B495)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x691ADDDB)
@@ -930,6 +1032,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
@@ -938,3 +1041,396 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
+F (..\Int\Src\bsp_adc.c)(0x6A13E492)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\bsp_adc.o --omf_browse focmotorcontrolboard\bsp_adc.crf --depend focmotorcontrolboard\bsp_adc.d)
+I (../Int/Inc/bsp.h)(0x6A13E492)
+I (../Core/Inc/main.h)(0x6A18006C)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x691ADDDC)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdint.h)(0x6853F9B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x691ADDDB)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stddef.h)(0x6853F9AF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
+I (../Core/Inc/adc.h)(0x6A16B494)
+F (..\Int\Src\bsp_command.c)(0x6A18006C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\bsp_command.o --omf_browse focmotorcontrolboard\bsp_command.crf --depend focmotorcontrolboard\bsp_command.d)
+I (../Int/Inc/bsp.h)(0x6A13E492)
+I (../Core/Inc/main.h)(0x6A18006C)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x691ADDDC)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdint.h)(0x6853F9B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x691ADDDB)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stddef.h)(0x6853F9AF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdio.h)(0x6853F9B0)
+F (..\Int\Src\bsp_delay.c)(0x6A13E492)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\bsp_delay.o --omf_browse focmotorcontrolboard\bsp_delay.crf --depend focmotorcontrolboard\bsp_delay.d)
+I (../Int/Inc/bsp.h)(0x6A13E492)
+I (../Core/Inc/main.h)(0x6A18006C)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x691ADDDC)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdint.h)(0x6853F9B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x691ADDDB)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stddef.h)(0x6853F9AF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
+F (..\Int\Src\bsp_motor.c)(0x6A13E492)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\bsp_motor.o --omf_browse focmotorcontrolboard\bsp_motor.crf --depend focmotorcontrolboard\bsp_motor.d)
+I (../Int/Inc/bsp.h)(0x6A13E492)
+I (../Core/Inc/main.h)(0x6A18006C)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x691ADDDC)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdint.h)(0x6853F9B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x691ADDDB)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stddef.h)(0x6853F9AF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
+I (../MATLAB/FOC_CURRENT.h)(0x688080D5)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\math.h)(0x6853F9AE)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\string.h)(0x6853F9B0)
+I (../MATLAB/rtwtypes.h)(0x68065432)
+I (../MATLAB/FOC_CURRENT_types.h)(0x68065432)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdio.h)(0x6853F9B0)
+I (../Core/Inc/tim.h)(0x6A17E7EF)
+F (..\Int\Src\bsp_protection.c)(0x6A13E492)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\bsp_protection.o --omf_browse focmotorcontrolboard\bsp_protection.crf --depend focmotorcontrolboard\bsp_protection.d)
+I (../Int/Inc/bsp.h)(0x6A13E492)
+I (../Core/Inc/main.h)(0x6A18006C)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x691ADDDC)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdint.h)(0x6853F9B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x691ADDDB)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stddef.h)(0x6853F9AF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
+F (..\Int\Src\bsp_pwm.c)(0x6A13E492)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\bsp_pwm.o --omf_browse focmotorcontrolboard\bsp_pwm.crf --depend focmotorcontrolboard\bsp_pwm.d)
+I (../Int/Inc/bsp.h)(0x6A13E492)
+I (../Core/Inc/main.h)(0x6A18006C)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x691ADDDC)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdint.h)(0x6853F9B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x691ADDDB)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stddef.h)(0x6853F9AF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
+I (../Core/Inc/tim.h)(0x6A17E7EF)
+F (..\Int\Src\bsp_shared.c)(0x6A13E492)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\bsp_shared.o --omf_browse focmotorcontrolboard\bsp_shared.crf --depend focmotorcontrolboard\bsp_shared.d)
+I (../Int/Inc/bsp.h)(0x6A13E492)
+I (../Core/Inc/main.h)(0x6A18006C)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x691ADDDC)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdint.h)(0x6853F9B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x691ADDDB)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stddef.h)(0x6853F9AF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
+F (..\Int\Src\bsp_status_led.c)(0x6A13E492)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\bsp_status_led.o --omf_browse focmotorcontrolboard\bsp_status_led.crf --depend focmotorcontrolboard\bsp_status_led.d)
+I (../Int/Inc/bsp.h)(0x6A13E492)
+I (../Core/Inc/main.h)(0x6A18006C)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x691ADDDC)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdint.h)(0x6853F9B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x691ADDDB)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stddef.h)(0x6853F9AF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
+F (..\Int\Src\bsp_temperature.c)(0x6A13E492)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\bsp_temperature.o --omf_browse focmotorcontrolboard\bsp_temperature.crf --depend focmotorcontrolboard\bsp_temperature.d)
+I (../Int/Inc/bsp.h)(0x6A13E492)
+I (../Core/Inc/main.h)(0x6A18006C)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x691ADDDC)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdint.h)(0x6853F9B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x691ADDDB)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stddef.h)(0x6853F9AF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
+F (..\Int\Src\Int_bsp.c)(0x6A17ED59)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\int_bsp.o --omf_browse focmotorcontrolboard\int_bsp.crf --depend focmotorcontrolboard\int_bsp.d)
+I (../Int/Inc/bsp.h)(0x6A13E492)
+I (../Core/Inc/main.h)(0x6A18006C)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x691ADDDB)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A17B121)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x691ADDDB)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f410cx.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x691ADDDC)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdint.h)(0x6853F9B0)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x691ADDDC)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x691ADDDC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x691ADDDB)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stddef.h)(0x6853F9AF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x691ADDDB)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x691ADDDB)
+I (../Core/Inc/adc.h)(0x6A16B494)
+I (../Core/Inc/tim.h)(0x6A17E7EF)
+I (../Core/Inc/usart.h)(0x6A17AECF)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stdio.h)(0x6853F9B0)
+I (../Core/Inc/gpio.h)(0x6A16B494)
+F (..\MATLAB\FOC_CURRENT.c)(0x6A13BE4C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Int/Inc -I ../MATLAB-I.\RTE\_FOCMotorControlBoard-IC:\Keil_v5\Pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5\Pack\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F410Cx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F410Cx-o focmotorcontrolboard\foc_current.o --omf_browse focmotorcontrolboard\foc_current.crf --depend focmotorcontrolboard\foc_current.d)
+I (..\MATLAB\FOC_CURRENT.h)(0x688080D5)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\math.h)(0x6853F9AE)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\stddef.h)(0x6853F9AF)
+I (C:\Keil_v5\Core\ARM\ARMCC\include\string.h)(0x6853F9B0)
+I (..\MATLAB\rtwtypes.h)(0x68065432)
+I (..\MATLAB\FOC_CURRENT_types.h)(0x68065432)
+I (..\MATLAB\FOC_CURRENT_private.h)(0x688080D5)

@@ -1,24 +1,25 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2026 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2026 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
+#include "crc.h"
 #include "dma.h"
 #include "tim.h"
 #include "usart.h"
@@ -26,7 +27,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -58,7 +59,12 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+uint8_t aRxBuffer[100];
+float KeyAddTime = 5;
+uint16_t RPM1 = 2000;
+uint16_t RPM2 = 4000;
+uint16_t RPM3 = 6000;
+extern uint8_t rxBuff[1000];
 /* USER CODE END 0 */
 
 /**
@@ -94,7 +100,43 @@ int main(void)
   MX_USART1_UART_Init();
   MX_ADC1_Init();
   MX_TIM1_Init();
+  MX_CRC_Init();
+  MX_TIM5_Init();
   /* USER CODE BEGIN 2 */
+  printf("FOCMotorControlBoard!\n");
+  HAL_UARTEx_ReceiveToIdle_IT(&huart1, rxBuff, 1000);
+
+  // ���?ADC1 ��ע�������־λ��ȷ����������ȷ���ע��ת������¼�?
+  __HAL_ADC_CLEAR_FLAG(&hadc1, ADC_FLAG_JEOC);
+  // ���жϷ�ʽ���� ADC1 ��ע��ת������ת�����ʱ�ᴥ����Ӧ���жϻص�����?
+  HAL_ADCEx_InjectedStart_IT(&hadc1);
+
+  // ��ʱ 500 ���룬��ϵͳ����ʱ�����?ADC ע��ת����׼������
+  HAL_Delay(500);
+
+  // �����ʱ��?1 �Ķ�·��־λ��ȷ����ʱ������������
+  __HAL_TIM_CLEAR_FLAG(&htim1, TIM_FLAG_BREAK);
+  // ������ʱ�� 1 �Ļ�����������
+  HAL_TIM_Base_Start(&htim1);
+  // ������ʱ�� 1 ͨ�� 1 �� PWM ���?
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+  // ������ʱ�� 1 ͨ�� 2 �� PWM ���?
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+  // ������ʱ�� 1 ͨ�� 3 �� PWM ���?
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+  // ������ʱ�� 1 ͨ�� 1 �Ļ��� PWM ���?
+  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+  // ������ʱ�� 1 ͨ�� 2 �Ļ��� PWM ���?
+  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
+  // ������ʱ�� 1 ͨ�� 3 �Ļ��� PWM ���?
+  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
+  // ������ʱ�� 1 ͨ�� 4 �� PWM ���?
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
+
+  // �����ʱ��?4 �Ķ�·��־λ��ȷ����ʱ������������
+  __HAL_TIM_CLEAR_FLAG(&htim5, TIM_FLAG_BREAK);
+  // ������ʱ�� 4 �Ļ�����������
+  HAL_TIM_Base_Start(&htim5);
 
   /* USER CODE END 2 */
 

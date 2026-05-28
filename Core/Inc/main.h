@@ -58,8 +58,30 @@ void Error_Handler(void);
 
 /* Private defines -----------------------------------------------------------*/
 
-/* USER CODE BEGIN Private defines */
+#define LED_OT_Pin GPIO_PIN_13
+#define LED_OT_GPIO_Port GPIOC
+#define LED_OC_Pin GPIO_PIN_14
+#define LED_OC_GPIO_Port GPIOC
+#define LED_OV_Pin GPIO_PIN_15
+#define LED_OV_GPIO_Port GPIOC
+#define LED_UV_Pin GPIO_PIN_0
+#define LED_UV_GPIO_Port GPIOH
+#define KEY_RUN_Pin GPIO_PIN_1
+#define KEY_RUN_GPIO_Port GPIOA
+#define KEY_DIR_Pin GPIO_PIN_2
+#define KEY_DIR_GPIO_Port GPIOA
+#define KEY_SPEED_UP_Pin GPIO_PIN_13
+#define KEY_SPEED_UP_GPIO_Port GPIOB
+#define KEY_SPEED_DOWN_Pin GPIO_PIN_14
+#define KEY_SPEED_DOWN_GPIO_Port GPIOB
 
+/* USER CODE BEGIN Private defines */
+#define control_mod   1     //控制模式（0：串口控制，1：按键控制）
+
+
+extern uint16_t RPM1;
+extern uint16_t RPM2;
+extern uint16_t RPM3;
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
