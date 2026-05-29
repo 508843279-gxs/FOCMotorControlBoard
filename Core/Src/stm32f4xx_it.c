@@ -23,7 +23,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "bsp.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -275,15 +274,5 @@ void DMA2_Stream7_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
-uint8_t rxBuff[1000]; // ���ջ�����
-// size ʵ�ʽ��յ����ݵĳ���
-void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size) 
-{
-    if (huart->Instance == USART1)
-    {
-        MotorControl_HandleUartCommand(rxBuff, Size);
-        HAL_UARTEx_ReceiveToIdle_IT(&huart1, rxBuff, 1000);
-    }
-}
-
+/* Hardware self-test callbacks are implemented in Int/Src/Int_bsp.c. */
 /* USER CODE END 1 */

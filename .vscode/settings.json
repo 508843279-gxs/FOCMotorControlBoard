@@ -1,0 +1,12 @@
+{
+    "files.autoGuessEncoding": true,
+    "[c]": {
+        "files.encoding": "gbk"
+    },
+    "[cpp]": {
+        "files.encoding": "gbk"
+    },
+    "[markdown]": {
+        "files.encoding": "utf8"
+    }
+}
