@@ -8,6 +8,8 @@
 
 #define COMMAND_KEY_SCAN_MS        20U
 #define COMMAND_RAMP_STEP_RPM      50.0f
+/* 实测本机 dir=1 为逆时针，默认用逆时针启动，避免顺时针产生推力。 */
+#define COMMAND_DEFAULT_DIR        (1)
 
 /* 三个速度档位。后续如果要改最高转速，优先改这里或 main.h 中的配置入口。 */
 uint16_t RPM1 = 2000U;
@@ -18,8 +20,8 @@ uint16_t RPM3 = 6000U;
 static uint32_t next_key_scan_ms;
 /* 命令层运行使能：1 表示允许状态机启动，0 表示停止。 */
 static uint8_t motor_enable;
-/* 当前方向：1 正向，-1 反向。 */
-static int8_t motor_dir = 1;
+/* 当前方向：1/-1 只代表控制符号；实际顺逆时针以低压试转结果为准。 */
+static int8_t motor_dir = COMMAND_DEFAULT_DIR;
 /* 当前速度档位：0 停止，1/2/3 对应 RPM1/RPM2/RPM3。 */
 static uint8_t speed_level;
 /* 斜坡后的当前转速命令，最终写入 comm[1]。 */
