@@ -337,7 +337,7 @@
               <MiscControls />
               <Define>USE_HAL_DRIVER,STM32F410Cx</Define>
               <Undefine />
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Core/Inc;../Int/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -641,6 +641,31 @@
               <FileName>Int_bsp.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Int\Src\Int_bsp.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Int\Src\bsp_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_command.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Int\Src\bsp_command.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Int\Src\bsp_pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_protection.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Int\Src\bsp_protection.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Int\Src\bsp_motor.c</FilePath>
             </File>
           </Files>
         </Group>

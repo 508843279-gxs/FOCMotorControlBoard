@@ -4,6 +4,7 @@
             "name": "FOCMotorControlBoard_FOCMotorControlBoard",
             "includePath": [
                 "c:\\Users\\Lenovo\\OneDrive\\Desktop\\FOCMotorControlBoard\\Core\\Inc",
+                "c:\\Users\\Lenovo\\OneDrive\\Desktop\\FOCMotorControlBoard\\Int\\Inc",
                 "c:\\Users\\Lenovo\\OneDrive\\Desktop\\FOCMotorControlBoard\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
                 "c:\\Users\\Lenovo\\OneDrive\\Desktop\\FOCMotorControlBoard\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
                 "c:\\Users\\Lenovo\\OneDrive\\Desktop\\FOCMotorControlBoard\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
