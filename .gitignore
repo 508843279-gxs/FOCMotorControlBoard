@@ -1,0 +1,11 @@
+# Keil / MDK build outputs
+MDK-ARM/FOCMotorControlBoard/
+
+# Simulink generated caches
+**/slprj/
+*.slxc
+
+# Common temporary files
+*.tmp
+*.bak
+*.log
