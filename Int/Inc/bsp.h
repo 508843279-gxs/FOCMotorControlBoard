@@ -103,6 +103,7 @@ void StatusLed_Set(enMcErr err, uint8_t on);
 /* 电机状态机接口。 */
 void MotorControl_UpdateCommand(void);
 void MotorControl_StateMachineStep(void);
+void MotorControl_FocControlStep(void);
 void ParaInit(void);
 
 #endif

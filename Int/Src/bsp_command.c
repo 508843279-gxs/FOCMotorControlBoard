@@ -81,7 +81,7 @@ static uint8_t Command_KeyPressed(GPIO_TypeDef *port, uint16_t pin, GPIO_PinStat
 static void Command_PrintStatus(const char *tag)
 {
     /* 命令层统一打印入口，调试按键/串口时主要看这一行。 */
-    printf("[BSP2] %s run=%u level=%u dir=%d rpm=%d state=%d err=%d\r\n",
+    printf("[FOC3] %s run=%u level=%u dir=%d rpm=%d state=%d err=%d\r\n",
            tag,
            motor_enable,
            speed_level,
@@ -97,7 +97,7 @@ static void Command_ClearFault(void)
     mc_info.mc_err = NONE_ERR;
     mc_info.mc_state = MC_STOP;
     StatusLed_AllOff();
-    printf("[BSP2] FAULT_RESET\r\n");
+    printf("[FOC3] FAULT_RESET\r\n");
 }
 
 void KeyControl_Update(void)
@@ -260,10 +260,10 @@ void MotorControl_HandleUartCommand(uint8_t *data, uint16_t size)
     }
     else if (Command_Equals(cmd, "HELP"))
     {
-        printf("[BSP2] CMD: RUN STOP DIR UP DOWN STATUS HELP\r\n");
+        printf("[FOC3] CMD: RUN STOP DIR UP DOWN STATUS HELP\r\n");
     }
     else
     {
-        printf("[BSP2] ERR UNKNOWN CMD: %s\r\n", cmd);
+        printf("[FOC3] ERR UNKNOWN CMD: %s\r\n", cmd);
     }
 }

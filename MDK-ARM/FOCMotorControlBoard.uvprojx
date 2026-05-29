@@ -337,7 +337,7 @@
               <MiscControls />
               <Define>USE_HAL_DRIVER,STM32F410Cx</Define>
               <Undefine />
-              <IncludePath>../Core/Inc;../Int/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Core/Inc;../Int/Inc;../MATLAB;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -666,6 +666,16 @@
               <FileName>bsp_motor.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Int\Src\bsp_motor.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MATLAB</GroupName>
+          <Files>
+            <File>
+              <FileName>FOC_CURRENT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MATLAB\FOC_CURRENT.c</FilePath>
             </File>
           </Files>
         </Group>

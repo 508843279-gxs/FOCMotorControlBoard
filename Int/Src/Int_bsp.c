@@ -1,10 +1,11 @@
 #include "adc.h"
 #include "bsp.h"
+#include "FOC_CURRENT.h"
 #include "usart.h"
 #include <stdio.h>
 
-/* 第二阶段 BSP 总入口和中断回调。
- * 中断里只做采样、计数、轻量保护；主循环里跑按键、命令和状态机。
+/* 第三阶段 BSP/FOC 总入口和中断回调。
+ * ADC 回调里完成采样、保护和 FOC 快速控制；主循环里跑按键、命令和状态机。
  */
 
 #define BSP_REPORT_INTERVAL_MS 1000U
@@ -23,10 +24,10 @@ static uint32_t bsp_last_adc_count;
 
 void BspInit(void)
 {
-    /* BSP 第二阶段启动提示：能看到这几行，说明串口 printf 已经通。 */
-    printf("\r\n[BSP2] BSP layer bring-up\r\n");
-    printf("[BSP2] Modules: adc command pwm protection motor\r\n");
-    printf("[BSP2] UART CMD: RUN STOP DIR UP DOWN STATUS HELP\r\n");
+    /* 第三阶段启动提示：能看到这几行，说明串口 printf 已经通。 */
+    printf("\r\n[FOC3] FOC_CURRENT bring-up\r\n");
+    printf("[FOC3] Modules: adc command pwm protection motor foc_current\r\n");
+    printf("[FOC3] UART CMD: RUN STOP DIR UP DOWN STATUS HELP\r\n");
 
     /* 初始化状态机、命令缓冲和故障灯，确保上电处于安全停止状态。 */
     ParaInit();
@@ -38,13 +39,13 @@ void BspInit(void)
     __HAL_ADC_CLEAR_FLAG(&hadc1, ADC_FLAG_JEOC);
     if (HAL_ADCEx_InjectedStart_IT(&hadc1) != HAL_OK)
     {
-        printf("[BSP2] ADC injected start failed\r\n");
+        printf("[FOC3] ADC injected start failed\r\n");
     }
 
     /* 启动 UART 空闲接收。串口命令在 HAL_UARTEx_RxEventCallback() 中解析。 */
     if (HAL_UARTEx_ReceiveToIdle_IT(&huart1, rxBuff, sizeof(rxBuff)) != HAL_OK)
     {
-        printf("[BSP2] UART RX start failed\r\n");
+        printf("[FOC3] UART RX start failed\r\n");
     }
 
     bsp_next_report_ms = HAL_GetTick() + BSP_REPORT_INTERVAL_MS;
@@ -63,9 +64,11 @@ void BspTask(void)
     if ((int32_t)(now - bsp_next_report_ms) >= 0)
     {
         uint32_t count = adc_injected_count;
-        printf("[BSP2] adc=%lu delta=%lu vbus=%d ia=%d ib=%d temp=%d state=%d err=%d\r\n",
+        printf("[FOC3] adc=%lu delta=%lu ref=%d obs=%d vbus=%d ia=%d ib=%d temp=%d state=%d err=%d\r\n",
                (unsigned long)count,
                (unsigned long)(count - bsp_last_adc_count),
+               (int)ObserverParam.RefRPM,
+               (int)ObserverParam.ObserverRPM,
                (int)mc_info.vbus,
                (int)mc_info.isens_a,
                (int)mc_info.isens_b,
@@ -85,6 +88,7 @@ void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef *hadc)
         adc_injected_count++;
         BspAdcSample_Update();
         MotorProtection_CheckVbus();
+        MotorControl_FocControlStep();
     }
 }
 

@@ -372,3 +372,111 @@ OT_ERR -> LED_OT
 6. `RUN` 后 PA8/PA9/PA10 和互补 PWM 引脚能看到波形。
 7. `STOP` 后 PWM 能停止。
 8. 欠压、过压、过流、过温能进入 `MC_ERR` 并点亮对应 LED。
+
+---
+
+# 第三阶段 FOC 接入调试说明
+
+第三阶段串口调试前缀为：
+
+```text
+[FOC3]
+```
+
+本阶段已经接入 `MATLAB/FOC_CURRENT.c`，运行链路为：
+
+```text
+ADC 采样 -> mc_info -> FOC_CURRENT_U / ObserverParam.RefRPM
+         -> FOC_CURRENT_step()
+         -> FOC_CURRENT_Y.tAout/tBout/tCout
+         -> TIM1 CH1/CH2/CH3
+```
+
+## 上电串口
+
+上电应看到：
+
+```text
+[FOC3] FOC_CURRENT bring-up
+[FOC3] Modules: adc command pwm protection motor foc_current
+[FOC3] UART CMD: RUN STOP DIR UP DOWN STATUS HELP
+```
+
+之后每秒应看到：
+
+```text
+[FOC3] adc=xxxxx delta=xxxxx ref=xxxx obs=xxxx vbus=xx ia=xx ib=xx temp=xx state=x err=x
+```
+
+新增字段：
+
+| 字段 | 含义 |
+| --- | --- |
+| `ref` | `ObserverParam.RefRPM`，目标转速 |
+| `obs` | `ObserverParam.ObserverRPM`，FOC 模型估算转速 |
+
+## FOC 输入检查
+
+进入 `MC_RUN` 后，`bsp_motor.c` 会写入：
+
+```c
+FOC_CURRENT_U.ISensA = mc_info.isens_a;
+FOC_CURRENT_U.ISensB = mc_info.isens_b;
+FOC_CURRENT_U.ISensC = mc_info.isens_c;
+FOC_CURRENT_U.VBus = mc_info.vbus;
+FOC_CURRENT_U.Ref_Id = mc_info.refId;
+ObserverParam.RefRPM = mc_info.refRPM;
+```
+
+如果 FOC 输出异常，优先看：
+
+1. `vbus` 是否明显错误或为 0。
+2. `ia` / `ib` 静态时是否接近 0。
+3. `ref` 是否随 `RUN/UP/DOWN/DIR` 变化。
+4. `err` 是否已经进入故障。
+
+## PWM 输出检查
+
+发送：
+
+```text
+RUN
+```
+
+状态应进入：
+
+```text
+state=2
+```
+
+此时示波器检查：
+
+```text
+PA8   TIM1_CH1
+PA9   TIM1_CH2
+PA10  TIM1_CH3
+PA7   TIM1_CH1N
+PB0   TIM1_CH2N
+PB1   TIM1_CH3N
+```
+
+第三阶段不再是固定 25%/50%/75%，而是由：
+
+```text
+FOC_CURRENT_Y.tAout
+FOC_CURRENT_Y.tBout
+FOC_CURRENT_Y.tCout
+```
+
+实时写入 TIM1 比较值。
+
+## 第三阶段通过标准
+
+1. 编译能找到 `FOC_CURRENT.h` 并编译 `FOC_CURRENT.c`。
+2. 上电能看到 `[FOC3]` 启动信息。
+3. 每秒 `delta` 稳定非 0。
+4. `RUN` 后 `state=2`。
+5. `UP/DOWN/DIR` 后 `ref` 有变化。
+6. PA8/PA9/PA10 的比较值由 FOC 输出更新。
+7. `STOP` 后 PWM 停止。
+8. 故障发生时进入 `MC_ERR` 并停止 PWM。
