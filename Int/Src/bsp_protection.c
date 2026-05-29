@@ -14,6 +14,7 @@
 
 void StatusLed_AllOff(void)
 {
+    /* 当前硬件为低电平点亮，所以熄灭要写 GPIO_PIN_SET。 */
     HAL_GPIO_WritePin(LED_UV_GPIO_Port, LED_UV_Pin, STATUS_LED_OFF);
     HAL_GPIO_WritePin(LED_OV_GPIO_Port, LED_OV_Pin, STATUS_LED_OFF);
     HAL_GPIO_WritePin(LED_OC_GPIO_Port, LED_OC_Pin, STATUS_LED_OFF);
@@ -22,6 +23,7 @@ void StatusLed_AllOff(void)
 
 void StatusLed_Set(enMcErr err, uint8_t on)
 {
+    /* 将逻辑上的 on/off 转换为实际 GPIO 电平。 */
     GPIO_PinState state = on ? STATUS_LED_ON : STATUS_LED_OFF;
 
     switch (err)
@@ -45,12 +47,14 @@ void StatusLed_Set(enMcErr err, uint8_t on)
 
 void MotorProtection_CheckVbus(void)
 {
+    /* 欠压直接进入故障。调试时如果没有接母线，这个故障很容易出现。 */
     if (mc_info.vbus < VBUS_UNDERVOLTAGE_V)
     {
         mc_info.mc_err = LV_ERR;
         mc_info.mc_state = MC_ERR;
         StatusLed_Set(LV_ERR, 1U);
     }
+    /* 过压增加连续计数，避免单次采样毛刺直接触发。 */
     else if (mc_info.vbus > VBUS_OVERVOLTAGE_V)
     {
         if (++mc_info.over_vol_count > 5U)
@@ -63,12 +67,14 @@ void MotorProtection_CheckVbus(void)
     }
     else
     {
+        /* 电压恢复正常后，清掉过压去抖计数。 */
         mc_info.over_vol_count = 0U;
     }
 }
 
 void MotorProtection_CheckRunFaults(void)
 {
+    /* 三相任意一相超过电流阈值，就认为存在过流风险。 */
     if (mc_info.isens_a > PHASE_OVERCURRENT_A || mc_info.isens_a < -PHASE_OVERCURRENT_A ||
         mc_info.isens_b > PHASE_OVERCURRENT_A || mc_info.isens_b < -PHASE_OVERCURRENT_A ||
         mc_info.isens_c > PHASE_OVERCURRENT_A || mc_info.isens_c < -PHASE_OVERCURRENT_A)
@@ -82,9 +88,11 @@ void MotorProtection_CheckRunFaults(void)
     }
     else
     {
+        /* 电流回到安全范围后，清掉过流去抖计数。 */
         mc_info.over_cur_count = 0U;
     }
 
+    /* 温度超过阈值后也做连续计数，避免温度换算毛刺误触发。 */
     if (mc_info.temperature >= MOTOR_OVERTEMP_C && mc_info.temperature < 200.0f)
     {
         if (++mc_info.over_temp_count > 4U)
@@ -96,6 +104,7 @@ void MotorProtection_CheckRunFaults(void)
     }
     else
     {
+        /* 温度回到安全范围后，清掉过温去抖计数。 */
         mc_info.over_temp_count = 0U;
     }
 }

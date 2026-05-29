@@ -99,6 +99,9 @@ int main(void)
   MX_CRC_Init();
   MX_TIM5_Init();
   /* USER CODE BEGIN 2 */
+  /* 第二阶段开始，main.c 不再直接操作 ADC/PWM/按键。
+   * 所有板级逻辑都交给 BSP 层，方便后面逐步恢复电机控制功能。
+   */
   BspInit();
   /* USER CODE END 2 */
 
@@ -109,6 +112,11 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    /* BSP 主任务：
+     * 1. 扫描按键和处理串口命令；
+     * 2. 更新电机状态机；
+     * 3. 定时打印调试信息。
+     */
     BspTask();
   }
   /* USER CODE END 3 */
