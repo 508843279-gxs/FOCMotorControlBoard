@@ -3,9 +3,30 @@
 
 #include "main.h"
 
-/* 第二阶段 BSP 分层公共头文件。
- * main.c 只调用 BspInit()/BspTask()，具体硬件细节拆到各个 bsp_*.c。
+/*
+ * 第四阶段 BSP 公共头文件。
+ *
+ * 本阶段在第三阶段 FOC 数据链路基础上，恢复原始工程里与安全试转相关的
+ * delay、shared、status_led、temperature 模块。main.c 仍然只调用
+ * BspInit()/BspTask()，具体硬件和控制细节放在各个 bsp_*.c 文件中。
  */
+
+/* 2π，保留原工程命名，后续角度和电角度相关计算可以继续使用。 */
+#define PI_2 6.2832f
+
+/*
+ * 门极驱动使能宏。
+ * 原始工程中这两个宏为空定义，这里继续保留调用点。若硬件需要真实 EN_GATE
+ * 或 WAKE 控制，只需要把下面宏改成 HAL_GPIO_WritePin() 即可。
+ */
+#define EN_GATE_SET
+#define EN_GATE_RESET
+
+/* 下面两个宏来自原始工程，当前阶段保留接口，等硬件引脚确认后再启用。 */
+#define LED_DRV_SET
+#define LED_DRV_RESET
+#define DISCHARGE_MOS_SET
+#define DISCHARGE_MOS_RESET
 
 typedef enum
 {
@@ -37,15 +58,20 @@ typedef struct
     enMcState mc_state; /* 当前电机状态 */
     enMcErr mc_err;     /* 当前故障类型 */
 
+    float refFreq; /* 预留：参考频率 */
     float refRPM; /* 参考转速，来自按键或串口命令 */
     float refIq;  /* 预留：q 轴参考电流 */
     float refId;  /* 预留：d 轴参考电流 */
+    float refPos; /* 预留：参考位置 */
 
     float isens_a;     /* A 相电流，单位 A */
     float isens_b;     /* B 相电流，单位 A */
     float isens_c;     /* C 相电流，由 -(A+B) 推算 */
     float vbus;        /* 母线电压，单位 V */
     float temperature; /* 电机或功率板温度，单位摄氏度 */
+    float encoder_theta;   /* 预留：编码器角度 */
+    uint16_t encoder_dir;  /* 预留：编码器方向 */
+    int16_t encoder_count; /* 预留：编码器计数 */
 
     uint16_t adc_vbus_raw; /* 母线电压 ADC 原始值 */
     uint16_t adc_temp_raw; /* 温度 ADC 原始值 */
@@ -57,6 +83,9 @@ typedef struct
     uint8_t over_temp_count; /* 过温连续计数，用于简单去抖 */
 
     float err_state_vbus; /* 记录进入过压故障时的母线电压 */
+    float run_realtime;   /* 预留：运行时间 */
+    uint8_t discharge_on; /* 预留：放电开关状态 */
+    uint8_t err_code;     /* 预留：扩展错误码 */
 } stMcInfo;
 
 /* 中断计数和串口接收缓冲区，主要用于调试确认外设链路是否正常。 */
@@ -71,6 +100,22 @@ extern uint8_t rxBuff[1000];
  */
 extern float comm[10];
 extern stMcInfo mc_info;
+extern float SafeTemp;
+
+/* 原始工程保留变量：第四阶段先恢复声明，后续接驱动芯片寄存器时继续使用。 */
+extern uint32_t forwardTimeCnt;
+extern uint32_t backTimeCnt;
+extern uint32_t positionTimeCnt;
+extern uint32_t speedSelectTimeCnt;
+extern uint32_t Theta_obser;
+extern uint8_t POWMNG_i2cReg1;
+extern uint8_t LOGIC_i2cReg2;
+extern uint8_t READY_i2cReg3;
+extern uint8_t NFAULT_i2cReg4;
+extern uint8_t STBY_i2cReg5;
+extern uint8_t STATUS_i2cReg6;
+extern uint8_t Rtest;
+extern uint8_t Ntest;
 
 /* 三个速度档位，命令模块根据档位选择目标转速。 */
 extern uint16_t RPM1;
@@ -83,6 +128,9 @@ void BspTask(void);
 
 /* ADC 采样换算接口。 */
 void BspAdcSample_Update(void);
+void BspTemperature_Accumulate(uint16_t raw_adc);
+void BspTemperature_FilterTick(void);
+float CalculateTemperature(float fR);
 
 /* 按键/串口命令接口。 */
 void KeyControl_Update(void);
@@ -105,5 +153,6 @@ void MotorControl_UpdateCommand(void);
 void MotorControl_StateMachineStep(void);
 void MotorControl_FocControlStep(void);
 void ParaInit(void);
+void delay_nop(uint16_t cont);
 
 #endif

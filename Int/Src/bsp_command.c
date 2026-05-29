@@ -1,8 +1,9 @@
 #include "bsp.h"
 #include <stdio.h>
 
-/* 第二阶段命令模块：
+/* 第四阶段命令模块：
  * 按键和串口都只改 comm[]，状态机统一从 comm[] 读取命令。
+ * 当前保留时间片扫描和速度斜坡，后续可继续恢复更细的运行中换向流程。
  */
 
 #define COMMAND_KEY_SCAN_MS        20U
@@ -81,7 +82,7 @@ static uint8_t Command_KeyPressed(GPIO_TypeDef *port, uint16_t pin, GPIO_PinStat
 static void Command_PrintStatus(const char *tag)
 {
     /* 命令层统一打印入口，调试按键/串口时主要看这一行。 */
-    printf("[FOC3] %s run=%u level=%u dir=%d rpm=%d state=%d err=%d\r\n",
+    printf("[SAFE4] %s run=%u level=%u dir=%d rpm=%d state=%d err=%d\r\n",
            tag,
            motor_enable,
            speed_level,
@@ -97,7 +98,7 @@ static void Command_ClearFault(void)
     mc_info.mc_err = NONE_ERR;
     mc_info.mc_state = MC_STOP;
     StatusLed_AllOff();
-    printf("[FOC3] FAULT_RESET\r\n");
+    printf("[SAFE4] FAULT_RESET\r\n");
 }
 
 void KeyControl_Update(void)
@@ -260,10 +261,10 @@ void MotorControl_HandleUartCommand(uint8_t *data, uint16_t size)
     }
     else if (Command_Equals(cmd, "HELP"))
     {
-        printf("[FOC3] CMD: RUN STOP DIR UP DOWN STATUS HELP\r\n");
+        printf("[SAFE4] CMD: RUN STOP DIR UP DOWN STATUS HELP\r\n");
     }
     else
     {
-        printf("[FOC3] ERR UNKNOWN CMD: %s\r\n", cmd);
+        printf("[SAFE4] ERR UNKNOWN CMD: %s\r\n", cmd);
     }
 }

@@ -4,8 +4,9 @@
 #include "usart.h"
 #include <stdio.h>
 
-/* 第三阶段 BSP/FOC 总入口和中断回调。
- * ADC 回调里完成采样、保护和 FOC 快速控制；主循环里跑按键、命令和状态机。
+/* 第四阶段 BSP/FOC 总入口和中断回调。
+ * ADC 回调里完成采样、温度滤波、保护和 FOC 快速控制；
+ * 主循环里跑按键、串口命令和状态机。
  */
 
 #define BSP_REPORT_INTERVAL_MS 1000U
@@ -24,10 +25,10 @@ static uint32_t bsp_last_adc_count;
 
 void BspInit(void)
 {
-    /* 第三阶段启动提示：能看到这几行，说明串口 printf 已经通。 */
-    printf("\r\n[FOC3] FOC_CURRENT bring-up\r\n");
-    printf("[FOC3] Modules: adc command pwm protection motor foc_current\r\n");
-    printf("[FOC3] UART CMD: RUN STOP DIR UP DOWN STATUS HELP\r\n");
+    /* 第四阶段启动提示：能看到这几行，说明串口 printf 已经通。 */
+    printf("\r\n[SAFE4] safe trial bring-up\r\n");
+    printf("[SAFE4] Modules: adc command pwm protection motor temperature foc_current\r\n");
+    printf("[SAFE4] UART CMD: RUN STOP DIR UP DOWN STATUS HELP\r\n");
 
     /* 初始化状态机、命令缓冲和故障灯，确保上电处于安全停止状态。 */
     ParaInit();
@@ -39,13 +40,13 @@ void BspInit(void)
     __HAL_ADC_CLEAR_FLAG(&hadc1, ADC_FLAG_JEOC);
     if (HAL_ADCEx_InjectedStart_IT(&hadc1) != HAL_OK)
     {
-        printf("[FOC3] ADC injected start failed\r\n");
+        printf("[SAFE4] ADC injected start failed\r\n");
     }
 
     /* 启动 UART 空闲接收。串口命令在 HAL_UARTEx_RxEventCallback() 中解析。 */
     if (HAL_UARTEx_ReceiveToIdle_IT(&huart1, rxBuff, sizeof(rxBuff)) != HAL_OK)
     {
-        printf("[FOC3] UART RX start failed\r\n");
+        printf("[SAFE4] UART RX start failed\r\n");
     }
 
     bsp_next_report_ms = HAL_GetTick() + BSP_REPORT_INTERVAL_MS;
@@ -64,7 +65,7 @@ void BspTask(void)
     if ((int32_t)(now - bsp_next_report_ms) >= 0)
     {
         uint32_t count = adc_injected_count;
-        printf("[FOC3] adc=%lu delta=%lu ref=%d obs=%d vbus=%d ia=%d ib=%d temp=%d state=%d err=%d\r\n",
+        printf("[SAFE4] adc=%lu delta=%lu ref=%d obs=%d vbus=%d ia=%d ib=%d temp=%d state=%d err=%d\r\n",
                (unsigned long)count,
                (unsigned long)(count - bsp_last_adc_count),
                (int)ObserverParam.RefRPM,
@@ -84,9 +85,10 @@ void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
     if (hadc->Instance == ADC1)
     {
-        /* ADC 回调里只做轻量工作：计数、采样换算、快速母线保护。 */
+        /* ADC 回调里只做轻量工作：计数、采样换算、温度滤波和快速保护。 */
         adc_injected_count++;
         BspAdcSample_Update();
+        BspTemperature_FilterTick();
         MotorProtection_CheckVbus();
         MotorControl_FocControlStep();
     }

@@ -3,12 +3,10 @@
 #include "tim.h"
 #include <stdio.h>
 
-/* 第三阶段状态机和 FOC 调度模块：
- * 状态机负责 RUN/STOP/ERR，快速控制函数负责把 ADC 采样送进 FOC_CURRENT。
+/* 第四阶段状态机和 FOC 调度模块：
+ * 在第三阶段 FOC 数据链路基础上，恢复原始版本的门极使能、短延时和
+ * 独立 shared 全局变量组织。快速 FOC 仍然放在 ADC 回调中执行。
  */
-
-float comm[10];
-stMcInfo mc_info;
 
 /* 上一次已经打印过的状态。状态变化时才打印，避免串口被刷屏。 */
 static enMcState last_report_state = MC_ERR;
@@ -34,7 +32,7 @@ static uint32_t MotorControl_ClampCompare(float value)
 static void MotorControl_PrintState(const char *tag)
 {
     /* 状态机调试打印：重点看 cmd/state/err/rpm。 */
-    printf("[FOC3] %s cmd=%d state=%d err=%d rpm=%d vbus=%d temp=%d\r\n",
+    printf("[SAFE4] %s cmd=%d state=%d err=%d rpm=%d vbus=%d temp=%d\r\n",
            tag,
            mc_info.cmd,
            mc_info.mc_state,
@@ -56,12 +54,15 @@ void ParaInit(void)
     mc_info.over_vol_count = 0U;
     mc_info.over_cur_count = 0U;
     mc_info.over_temp_count = 0U;
+    mc_info.temperature = 0.0f;
+    SafeTemp = 0.0f;
     comm[0] = 0.0f;
     comm[1] = 0.0f;
     comm[2] = 0.0f;
     StatusLed_AllOff();
-    /* 初始化结束时先关 PWM，避免上电瞬间误输出。 */
+    /* 初始化结束时先关 PWM 和门极使能，避免上电瞬间误输出。 */
     StopPWM();
+    EN_GATE_RESET;
 }
 
 void MotorControl_UpdateCommand(void)
@@ -100,6 +101,9 @@ void MotorControl_StateMachineStep(void)
         ObserverParam.RefRPM = mc_info.refRPM;
         /* 先给三相 50% 中点，等待下一次 ADC 回调计算出真正的 FOC 比较值。 */
         BspPwm_SetComparePercent(50U, 50U, 50U);
+        /* 恢复原始启动顺序：先使能门极驱动，再短延时，最后打开 PWM。 */
+        EN_GATE_SET;
+        delay_nop(500U);
         StartPWM();
         mc_info.mc_state = MC_RUN;
         break;
@@ -110,6 +114,8 @@ void MotorControl_StateMachineStep(void)
         if (mc_info.cmd == STOP_CMD)
         {
             StopPWM();
+            EN_GATE_RESET;
+            delay_nop(500U);
             FOC_CURRENT_initialize();
             mc_info.mc_state = MC_STOP;
         }
@@ -124,6 +130,7 @@ void MotorControl_StateMachineStep(void)
     case MC_ERR:
         /* 故障状态强制关闭 PWM，并清启动命令，等待按键/串口清故障。 */
         StopPWM();
+        EN_GATE_RESET;
         comm[2] = 0.0f;
         break;
 
@@ -162,6 +169,7 @@ void MotorControl_FocControlStep(void)
     if (mc_info.mc_err != NONE_ERR)
     {
         StopPWM();
+        EN_GATE_RESET;
         mc_info.mc_state = MC_ERR;
     }
 }

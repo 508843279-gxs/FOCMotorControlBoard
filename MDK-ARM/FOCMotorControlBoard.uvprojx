@@ -653,6 +653,11 @@
               <FilePath>..\Int\Src\bsp_command.c</FilePath>
             </File>
             <File>
+              <FileName>bsp_delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Int\Src\bsp_delay.c</FilePath>
+            </File>
+            <File>
               <FileName>bsp_pwm.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Int\Src\bsp_pwm.c</FilePath>
@@ -666,6 +671,21 @@
               <FileName>bsp_motor.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Int\Src\bsp_motor.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_shared.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Int\Src\bsp_shared.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_status_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Int\Src\bsp_status_led.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_temperature.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Int\Src\bsp_temperature.c</FilePath>
             </File>
           </Files>
         </Group>
